@@ -7,14 +7,29 @@ function getPhotoFromId(photoId) {
 const PHOTO_LIST_URL = "https://picsum.photos/list";
 
 const App = (props) => {
-  // 1. Set up React.useState in order to create a variable that will be used to include an array of photos and a method to "setPhotos"
+// Declare a state with useState([]), photos, setPhotos
+const [photos, setPhotos] = useState([])
 
-  // 2. Declare a React.useEffect life cycle method
-  // This life cycle method:
-  // - will be called after the component is initially rendered
-  // - will fetch an array of photos
-  // - will set that array of photos to state once received
+//declare a useEffect lifecycle method
+useEffect(() => {
+  fetch(PHOTO_LIST_URL)
+  .then((res) => res.json())
+  .then((picObj) => )
+}, [])
 
+// fetch an array of photos
+
+// add array to state
+
+
+// Check to make sure that the photos are rendering properly
+
+// each image element needs to have attributes that include the file
+// name the photo id and the url
+
+//styling
+// cause the header and .collage div to be centered
+// no more than 4 photos per row
   return (
     <React.Fragment>
       <header>
